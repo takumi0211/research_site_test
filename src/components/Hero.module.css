@@ -1,0 +1,25 @@
+.hero {
+    padding: var(--spacing-xl) 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: var(--font-size-xxl);
+    font-weight: 700;
+    line-height: 0.9;
+    grid-column: 1 / -1;
+    margin-bottom: var(--spacing-lg);
+}
+
+.highlight {
+    color: var(--color-accent);
+}
+
+.meta {
+    grid-column: 1 / 5;
+    font-size: var(--font-size-lg);
+    border-top: 2px solid var(--color-black);
+    padding-top: var(--spacing-sm);
+}
