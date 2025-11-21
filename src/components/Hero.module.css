@@ -1,56 +1,66 @@
 .hero {
     position: relative;
-    min-height: 90vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
-    overflow: hidden;
-}
-
-.bgWrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.bgImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
-    /* Slight fade to make text pop */
+    justify-content: center;
+    text-align: center;
+    padding: var(--spacing-xxl) 0;
+    background: radial-gradient(circle at 50% 50%, #ffffff 0%, #f5f5f7 100%);
 }
 
 .contentContainer {
-    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
     z-index: 1;
-    width: 100%;
 }
 
 .title {
-    font-size: var(--font-size-xxl);
+    font-size: 64px;
+    line-height: 1.0625;
     font-weight: 700;
-    line-height: 0.9;
-    grid-column: 1 / 10;
-    /* Span more columns */
-    margin-bottom: var(--spacing-lg);
-    mix-blend-mode: difference;
-    /* Cool effect against the bg */
-    color: var(--color-white);
-    /* Assuming dark parts of bg, or difference will handle it */
+    letter-spacing: -0.005em;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-main);
 }
 
-.highlight {
-    color: var(--color-accent);
-    mix-blend-mode: normal;
+.subtitle {
+    font-size: 24px;
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: 0.009em;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.meta {
-    grid-column: 1 / 5;
-    font-size: var(--font-size-lg);
-    border-top: 2px solid var(--color-black);
-    padding-top: var(--spacing-sm);
-    font-weight: 500;
+.ctaButton {
+    display: inline-block;
+    background-color: var(--accent-blue);
+    color: #fff;
+    padding: 18px 32px;
+    border-radius: 980px;
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+    background-color: var(--accent-blue-hover);
+    transform: scale(1.02);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
 }

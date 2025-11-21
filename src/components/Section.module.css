@@ -1,20 +1,24 @@
 .section {
     padding: var(--spacing-xl) 0;
-    border-top: 1px solid var(--color-grey);
 }
 
 .title {
-    grid-column: 1 / 4;
-    font-size: var(--font-size-xl);
-    margin-bottom: var(--spacing-md);
-    position: sticky;
-    top: 100px;
-    /* Adjust based on header height */
-    align-self: start;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-main);
+    letter-spacing: -0.005em;
 }
 
 .content {
-    grid-column: 5 / -1;
-    font-size: var(--font-size-lg);
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 1.47059;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 32px;
+    }
 }

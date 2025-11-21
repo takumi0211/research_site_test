@@ -1,33 +1,38 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import styles from './Hero.module.css';
-import heroBg from '../assets/hero_bg.png';
 
 const Hero: React.FC = () => {
     return (
         <section className={styles.hero}>
-            <div className={styles.bgWrapper}>
-                <img src={heroBg} alt="Abstract Background" className={styles.bgImage} />
-            </div>
-            <div className={`container ${styles.contentContainer}`}>
+            <div className={styles.contentContainer}>
                 <motion.h1
                     className={styles.title}
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    Exploring the <br />
-                    <span className={styles.highlight}>Future of</span> <br />
-                    Interaction
+                    Exploring the Future of Interaction
                 </motion.h1>
-                <motion.div
-                    className={styles.meta}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 0.8 }}
+
+                <motion.p
+                    className={styles.subtitle}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    <p>Graduation Research 2025</p>
-                    <p>Takumi Shioda</p>
+                    Graduation Research 2025. A deep dive into next-generation user interfaces and human-computer interaction paradigms.
+                </motion.p>
+
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.4, duration: 0.5 }}
+                >
+                    <Link to="/research" className={styles.ctaButton}>
+                        Learn more
+                    </Link>
                 </motion.div>
             </div>
         </section>

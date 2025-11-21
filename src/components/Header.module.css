@@ -1,38 +1,79 @@
 .header {
-    padding: var(--spacing-md) 0;
-    border-bottom: 1px solid var(--color-black);
     position: sticky;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(5px);
-    z-index: 100;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease;
 }
 
-.header :global(.container) {
+.headerContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 44px;
+    /* Apple's standard nav height */
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
 }
 
 .logo {
-    font-weight: 700;
-    font-size: var(--font-size-lg);
-    letter-spacing: -0.05em;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    transition: opacity 0.2s ease;
 }
 
-.nav ul {
+.logo:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.nav {
+    height: 100%;
+}
+
+.navList {
     display: flex;
-    gap: var(--spacing-md);
+    gap: 24px;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.nav a {
-    font-size: var(--font-size-base);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    transition: color 0.2s ease;
+.navLink {
+    font-size: 12px;
+    color: var(--text-main);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+    letter-spacing: -0.01em;
 }
 
-.nav a:hover {
-    color: var(--color-accent);
+.navLink:hover {
+    opacity: 1;
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.active {
+    opacity: 1;
+    color: var(--accent-blue);
+}
+
+@media (max-width: 768px) {
+    .headerContainer {
+        height: 48px;
+    }
+
+    .navList {
+        gap: 16px;
+    }
 }
