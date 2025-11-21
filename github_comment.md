@@ -3,5 +3,5 @@ git reset --hard origin/main
 git clean -fd
 
 git add -A
-git commit -m "change design to oAI."
+git commit -m "change icon to oAI."
 git push origin main
