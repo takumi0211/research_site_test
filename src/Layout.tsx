@@ -18,11 +18,11 @@ const Layout: React.FC = () => {
                 top: 0,
                 zIndex: 100
             }}>
-                <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: 0 }}>
+                <div className="container header-container">
                     <Link to="/" style={{ fontSize: '1.5rem', fontWeight: 900, textTransform: 'uppercase' }}>
                         Takumi Shioda
                     </Link>
-                    <nav style={{ display: 'flex', gap: 'var(--spacing-md)' }}>
+                    <nav className="nav-menu">
                         <Link to="/" style={{ ...navLinkStyle, ...isActive('/') }}>Home</Link>
                         <Link to="/about" style={{ ...navLinkStyle, ...isActive('/about') }}>About</Link>
                         <Link to="/research" style={{ ...navLinkStyle, ...isActive('/research') }}>Research</Link>
