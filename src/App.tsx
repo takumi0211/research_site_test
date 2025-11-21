@@ -2,6 +2,7 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Section from './components/Section';
+import conceptViz from './assets/concept_viz.png';
 
 function App() {
   return (
@@ -41,16 +42,17 @@ function App() {
             collaborator. Participants reported higher satisfaction and ownership of the final output
             compared to traditional automation tools.
           </p>
-          <div style={{
-            marginTop: '2em',
-            background: '#f0f0f0',
-            height: '300px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontWeight: 'bold'
-          }}>
-            [Placeholder for Data Visualization]
+          <div style={{ marginTop: '2em' }}>
+            <img
+              src={conceptViz}
+              alt="Data Visualization of Results"
+              style={{
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+                border: '1px solid #eee'
+              }}
+            />
           </div>
         </Section>
 
